@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Skills Quiz</title>
+  <link rel="stylesheet" href="technical_skills.css">
+    /* Include your CSS styles here */
+
+</head>
+<body>
+  <header>
+    <h1>Technical Skills Quiz</h1>
+  </header>
+
+  <section id="quiz">
+    <form id="quizForm">
+      <h2 data-answer="b">Question 1:</h2>
+      <p>What type of heavy machinery is commonly used for excavation in surface mining?</p>
+      <ul>
+        <li><input type="radio" name="q1" value="a"> Bulldozer</li>
+        <li><input type="radio" name="q1" value="b"> Excavator</li>
+        <li><input type="radio" name="q1" value="c"> Dump truck</li>
+        <li><input type="radio" name="q1" value="d"> Drill rig</li>
+      </ul>
+
+      <h2 data-answer="a">Question 2:</h2>
+      <p>Which type of drill is commonly used for drilling blast holes in surface mining?</p>
+      <ul>
+        <li><input type="radio" name="q2" value="a"> Rotary drill</li>
+        <li><input type="radio" name="q2" value="b"> Jackhammer</li>
+        <li><input type="radio" name="q2" value="c"> Core drill</li>
+        <li><input type="radio" name="q2" value="d"> Auger drill</li>
+      </ul>
+
+      <!-- Add more questions here -->
+
+      <button type="button" id="submitBtn">Submit</button>
+    </form>
+  </section>
+
+  <div id="score"></div>
+
+  <script>
+    document.getElementById("submitBtn").addEventListener("click", function() {
+      var form = document.getElementById("quizForm");
+      var totalQuestions = form.querySelectorAll("h2").length;
+      var score = 0;
+
+      for (var i = 0; i < totalQuestions; i++) {
+        var question = form.querySelectorAll("h2")[i];
+        var correctAnswer = question.dataset.answer;
+        var selectedAnswer = form.querySelector('input[name="q' + (i + 1) + '"]:checked');
+
+        if (selectedAnswer && selectedAnswer.value === correctAnswer) {
+          score++;
+        }
+      }
+
+      var scorePercentage = (score / totalQuestions) * 100;
+      var scoreMessage = "Your score: " + score + " / " + totalQuestions + " (" + scorePercentage + "%)";
+      alert(scoreMessage);
+    });
+  </script>
+</body>
+</html>

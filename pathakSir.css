@@ -1,0 +1,165 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #555; 
+}
+
+/* Centering images */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styling for the header */
+div {
+    background-color: #f2f2f2; /* Grey header background */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+div:hover {
+    background-color: #ccc; /* Lighter background color on hover */
+}
+
+/* Styling for list items */
+li {
+    margin-bottom: 10px;
+}
+
+/* Border around list items */
+.borderList {
+    list-style-position: inside;
+    border: 5px solid #555; /* Light gray border */
+    background-color: #f2f2f2; /* Light gray background for list items */
+    padding: 10px; /* Added padding */
+    border-radius: 5px; /* Rounded corners */
+    transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+.borderList:hover {
+    border-color: #ccc; /* Lighter border color on hover */
+}
+
+/* Styling for sections */
+section {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease; /* Smooth box shadow transition */
+}
+
+section:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increase box shadow on hover */
+}
+
+/* Styling for headings */
+h1, h2 {
+    color: #1c1c1c; /* Grey headings */
+}
+
+/* Styling for links */
+a {
+    color: #555; /* Grey links */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #333; /* Dark grey on hover */
+}
+
+/* Styling for images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+img:hover {
+    transform: scale(1.1); /* Increase size on hover */
+}
+
+/* Styling for resources links */
+#resources a {
+    display: block;
+    margin-bottom: 5px;
+    color: #555; /* Grey links */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+#resources a:hover {
+    color: #333; /* Dark grey on hover */
+}
+li div{
+    color: #1c1c1c;
+    text-align: justify;
+}
+/* Define keyframes for bounce animation */
+/* @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+} */
+
+/* Apply bounce animation to the header */
+
+
+/* Apply fade-in animation to sections */
+section {
+    animation: fadeIn 1s ease-out; /* Apply fade-in animation */
+}
+
+/* Define keyframes for fade-in animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); } 
+ }
+
+/* Add hover effect to list items */
+li {
+    transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+/* Apply scale animation on hover */
+li:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Apply rotation animation to images */
+img {
+    transition: transform 0.5s ease; /* Smooth transform transition */
+}
+
+/* Rotate images continuously */
+img:hover {
+    animation: rotate 5s infinite linear; /* Apply rotation animation infinitely */
+}
+
+/* Define keyframes for rotation animation */
+/* @keyframes rotate {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+} */
+
+/* Add pulsating effect to resources links */
+#resources a {
+    animation: pulse 2s infinite; /* Apply pulsating animation infinitely */
+}
+
+/* Define keyframes for pulsating animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
